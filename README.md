@@ -1,1 +1,1 @@
-# Music-Master
+# React App Template
