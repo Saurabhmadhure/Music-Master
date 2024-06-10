@@ -1,0 +1,30 @@
+.kR63dG_images {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 100px;
+}
+
+@font-face {
+  font-family: RobotoCondensed;
+  src: url("roboto-condensed.light.a5f9c5f3.ttf");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: EconomicaBold;
+  src: url("economica-bold.a4fc1a89.ttf");
+}
+
+body {
+  text-align: center;
+  padding: 2.5%;
+  font-family: RobotoCondensed;
+  font-size: 20px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: EconomicaBold;
+}
+
+/*# sourceMappingURL=index.087e1ab1.css.map */
