@@ -4,3 +4,37 @@
   border-radius: 100;
   object-fit: cover;
 }
+.heading {
+  font-size: 15px;
+  font-weight: 600;
+  background-image: conic-gradient(#553c9a, #ee4b2b, #00c2cb, #553c9a);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.tracks {
+  width: inherit;
+  height: inherit;
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  cursor: pointer;
+}
+.tracks_image {
+  width: inherit;
+  height: inherit;
+}
+
+.track_icon {
+  position: absolute;
+  bottom: 100px;
+  left: 100px;
+  color: rgb(236, 49, 49);
+  background-color: black;
+  width: 50px;
+  height: 42px;
+  border-radius: 25px;
+  padding: 10px;
+  opacity: 0.8;
+}

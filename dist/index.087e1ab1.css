@@ -5,6 +5,217 @@
   border-radius: 100px;
 }
 
+.kR63dG_heading {
+  color: #0000;
+  background-image: conic-gradient(#553c9a, #ee4b2b, #00c2cb, #553c9a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.kR63dG_tracks {
+  width: inherit;
+  height: inherit;
+  cursor: pointer;
+  margin: 20px;
+  display: inline-block;
+  position: relative;
+}
+
+.kR63dG_tracks_image {
+  width: inherit;
+  height: inherit;
+}
+
+.kR63dG_track_icon {
+  color: #ec3131;
+  width: 50px;
+  height: 42px;
+  opacity: .8;
+  background-color: #000;
+  border-radius: 25px;
+  padding: 10px;
+  position: absolute;
+  bottom: 100px;
+  left: 100px;
+}
+
+body {
+  background-color: #000;
+}
+
+.wrapper {
+  height: 40vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.inner-containers {
+  perspective: calc(var(--index) * 35);
+  gap: .4rem;
+  display: flex;
+}
+
+.inner-container {
+  width: calc(var(--index) * 5);
+  height: calc(var(--index) * 10);
+  cursor: pointer;
+  filter: grayscale() brightness(.5);
+  transition: transform 1.25s var(--transition), filter 3s var(--transition), width 1.25s var(--transition);
+  will-change: transform, filter, rotateY, width;
+  background-color: #222;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 0 0 2px #00fffc;
+}
+
+.inner-container:before, .inner-container:after {
+  content: "";
+  height: 100%;
+  width: 20px;
+  right: calc(var(--index) * -1);
+  position: absolute;
+}
+
+.inner-container:after {
+  left: calc(var(--index) * -1);
+}
+
+.inner-containers .inner-container:hover {
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 10) );
+  width: 250px;
+}
+
+.inner-containers .inner-container:hover + * {
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 8.5) ) rotateY(35deg);
+  z-index: -1;
+  width: 160px;
+}
+
+.inner-containers .inner-container:hover + * + * {
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 5.6) ) rotateY(40deg);
+  z-index: -2;
+  width: 80px;
+}
+
+.inner-containers .inner-container:hover + * + * + * {
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 2.5) ) rotateY(30deg);
+  z-index: -3;
+  width: 40px;
+}
+
+.inner-containers .inner-container:hover + * + * + * + * {
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * .6) ) rotateY(15deg);
+  z-index: -4;
+  width: 20px;
+}
+
+.inner-containers .inner-container:has( + :hover) {
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 8.5) ) rotateY(-35deg);
+}
+
+.inner-containers .inner-container:has( + * + :hover) {
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 5.6) ) rotateY(-40deg);
+}
+
+.inner-containers .inner-container:has( + * + * + :hover) {
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 2.5) ) rotateY(-30deg);
+}
+
+.inner-containers .inner-container:has( + * + * + * + :hover) {
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * .6) ) rotateY(-15deg);
+}
+
+.inner-containers .inner-container:active, .inner-containers .inner-container:focus {
+  width: 28vw;
+  filter: inherit;
+  z-index: 100;
+  transform: translateZ(calc(var(--index) * 10) );
+  margin: 0 .45vw;
+}
+
+.search {
+  color: #fff;
+  background-image: linear-gradient(40deg, #111, #00fffc);
+  border: 1px solid #fff;
+  border-radius: 4px;
+  align-items: center;
+  padding: 10px;
+  display: inline-flex;
+}
+
+.search :is(input, button) {
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.search__input {
+  width: 0;
+  transition: width .5s;
+}
+
+.search__button {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  place-items: center;
+  transition: color .25s;
+  display: grid;
+}
+
+.search__button:hover {
+  color: #e3e3e3;
+}
+
+.search:focus-within input {
+  width: 200px;
+}
+
+::placeholder {
+  font: inherit;
+  color: #e3e3e3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.heading {
+  color: #0000;
+  background-image: conic-gradient(#553c9a 30%, #ee4b2b 40% 70%, #00c2cb 80%, #553c9a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 70px;
+  font-weight: 600;
+}
+
+:root {
+  --index: calc(1vw + 1vh);
+  --transition: cubic-bezier(.1, .7, 0, 1);
+}
+
+body {
+  background-color: #000;
+}
+
 @font-face {
   font-family: RobotoCondensed;
   src: url("roboto-condensed.light.a5f9c5f3.ttf");
